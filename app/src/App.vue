@@ -14,11 +14,6 @@
 
 <script>
 import store from './vuex/store'
-// import util from './util'
-import Navbar from './components/Navbar'
-import IFooter from './components/IFooter'
-// import Alert from './components/Alert'
-// import auth from './auth'
 import {
 
 } from './vuex/getters'
@@ -29,8 +24,7 @@ import {
 export default {
   store,
   components: {
-    Navbar,
-    IFooter
+
   },
 
   vuex: {
