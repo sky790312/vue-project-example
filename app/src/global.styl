@@ -1,0 +1,241 @@
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css')
+@import url('../node_modules/font-awesome/css/font-awesome.min.css')
+@import './variables'
+@import './mixins'
+
+/* Tags */
+
+html {
+  position: relative
+  min-height: 100%
+}
+
+body {
+  color: $default-color
+  font-family: 'Open Sans', sans-serif
+  margin-bottom: 100px
+}
+
+a {
+  color: $brand-color
+  cursor: pointer
+
+  .fa {
+    color: $gray-light
+    margin-left: 4px
+
+    &:hover {
+      color: $brand-color
+    }
+  }
+}
+
+a:focus,
+a:hover {
+  color: $brand-color
+  text-decoration: underline
+}
+
+h1 {
+  margin-top: 5px
+  margin-bottom: 15px
+
+  &.header-left {
+    font-size: 16px
+    // float: left
+    text-align: left
+    text-transform: uppercase
+  }
+
+  &.header-center {
+    font-size: 22px
+    margin-bottom: 20px
+    text-transform: uppercase
+    text-align: center
+  }
+
+}
+
+h2 {
+  font-size: 20px
+}
+
+h3 {
+  font-size: 18px
+}
+
+h4 {
+  font-size: 16px
+}
+
+hr {
+  border-top-color: $gray-lighter
+  margin-top: 10px
+  margin-bottom: 10px
+}
+
+select {
+  padding: 5px
+  border-radius($border-radius)
+}
+
+input[type="file"] {
+  padding: 5px 0
+  border-radius($border-radius)
+}
+
+pre {
+  text-align: left
+}
+
+/* Classes */
+
+.fa {
+  color: $gray-light
+}
+
+.text-muted {
+  color: $gray-light
+}
+
+.disabled {
+  pointer-events: none
+}
+
+.subheader {
+  text-align: center
+
+  p {
+    margin: 15px 0
+    text-align: left
+  }
+
+  img {
+    width: 120px
+    height: 120px
+    margin-bottom: 10px
+  }
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: $default-color
+}
+
+.page-header {
+  padding-top: 20px
+  margin-top: 0
+}
+
+.btn {
+  border-bottom-width: 2px
+  font-size: 13.5px
+  text-transform: uppercase
+}
+
+.btn ~ .btn {
+  margin-left: 3px
+}
+
+.btn-primary {
+  background-color: $brand-color
+  border-top-color: $brand-color
+  border-left-color: $brand-color
+  border-right-color: $brand-color
+  border-bottom-color: darken($brand-color, 10%)
+
+  &:hover, &:focus {
+    hover-color($brand-color)
+  }
+}
+
+.btn-black {
+  background-color: $default-color
+  border-top-color: $default-color
+  border-left-color: $default-color
+  border-right-color: $default-color
+  border-bottom-color: darken($default-color, 10%)
+
+  &:hover {
+    color: $white
+    hover-color($default-color)
+  }
+}
+
+.panel {
+  border-bottom-width: 2px
+}
+
+.no-bullet {
+  list-style-type: none
+}
+
+.list-inline {
+  margin-top: 5px
+
+  > li {
+    padding-right: 10px
+    padding-left: 10px
+
+    &:last-child {
+      padding-right: 0
+    }
+  }
+}
+
+.form-control {
+  background-color: $gray-lighter
+  border-top-color: $gray-light
+  border-left-color: $gray-lighter
+  border-right-color: $gray-lighter
+  border-bottom-color: $gray-lighter
+  -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0)
+  box-shadow: inset 0 0 0 rgba(0,0,0,0)
+}
+
+.form-control-static {
+  word-wrap: break-word
+}
+
+.input-group input {
+  border-left-color: #ccc
+}
+
+.input-group-btn:first-child > .btn {
+  margin-right: -2px
+  max-width: none
+}
+
+.form-group.required .control-label:after {
+  content: "*"
+  color: $red
+}
+
+.alert-default {
+  color: $gray
+  background-color: $white
+  border-color: #ddd
+}
+
+.fa-slow-spin {
+  -webkit-animation: fa-spin 6s infinite linear
+  animation: fa-spin 6s infinite linear
+}
+
+.close-button {
+  color: $white
+  position: absolute
+  text-shadow: 0 1px 0 $white
+  font-size: 20px
+
+  &:after {
+    content: '✖'
+    color: $white
+  }
+
+  &:hover {
+    text-decoration: none
+    opacity: .7
+    font-size: 19px
+  }
+}
