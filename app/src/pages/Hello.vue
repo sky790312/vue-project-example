@@ -1,84 +1,53 @@
 <template>
-  <div id="maintenance" class="col-md-12">
-    <img class="maintenanceImage" :src="maintenanceImage">
+  <div id="hello" class="col-md-12">
+    <img class="helloImage" :src="helloImage">
     <!-- <img class="logo" :src="logoImage"> -->
-    <div class="maintenance">
+    <div class="hello">
       <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
        <path id="path">
       		<animate attributeName="d" from="m0,50 h0" to="m0,50 h1100" dur="4s" begin="0s"  repeatCount="indefinite"/>
       	</path>
       	<text font-size="22" fill='white'>
-      		<textPath xlink:href="#path">SYSTEM MAINTENANCE ...
+      		<textPath xlink:href="#path">HELLO VUE ...
           </textPath>
       	</text>
       </svg>
     </div>
-    <!-- <hr> -->
-    <!-- <a class="btn btn-default btn-facebook" @click="fbLoginSubmit">
-      <i class="fa fa-facebook"></i>
-      {{ $t('logInWithFacebook') }}
-      <div id="fb-root"></div>
-    </a>
-    <a :href="'#/forgot-pass'">{{ $t('forgotPassLink') }}</a> -->
   </div>
 </template>
 
 <script>
 import {
-  // isLoading,
-  // authInfo,
-  // user,
-  // activeLoading,
-  // alertParams
+
 } from '../vuex/getters'
 
 import {
-  // fetchShareCodes,
-  // fetchBuildings,
-  // checkBuildings,
-  // checkShareCodes,
-  // setUserInfo,
-  // setIsLoading,
-  // setProfilePhoto,
-  // setAlertParams
+
 } from '../vuex/actions'
 
 export default {
-  name: 'Login',
+  name: 'Hello',
   components: {
 
   },
 
   vuex: {
     getters: {
-      // isLoading,
-      // authInfo,
-      // user,
-      // activeLoading,
-      // alertParams
+
     },
     actions: {
-      // fetchShareCodes,
-      // fetchBuildings,
-      // checkBuildings,
-      // checkShareCodes,
-      // setUserInfo,
-      // setIsLoading,
-      // setProfilePhoto,
-      // setAlertParams
+
     }
   },
 
   data () {
     return {
-      logoImage: require('../assets/logo-login.png'),
-      maintenanceImage: require('../assets/maintenance.png')
+      helloImage: require('../assets/hello.jpg')
     }
   },
 
   route: {
     // canActivate () {
-    //   return !auth.user.authenticated
     // },
     //
     activate: function () {
@@ -103,12 +72,12 @@ export default {
 
 $fb-color = #3b5998
 
-#maintenance,
-#maintenance .container {
-  max-width: 500px // TODO find a better way of doing this
+#hello,
+#hello .container {
+  max-width: 250px // TODO find a better way of doing this
 }
 
-#maintenance {
+#hello {
   color: $white
   transform: translate(-50%, -50%)
   top: 50%
@@ -163,11 +132,11 @@ $fb-color = #3b5998
     }
   }
 
-  .maintenanceImage {
+  .helloImage {
     width: 100%
   }
 
-  .maintenance {
+  .hello {
     -webkit-animation: fade 2s infinite
     -moz-animation: fade 2s infinite
     -o-animation: fade 2s infinite

@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import { sync } from 'vuex-router-sync'
 import Resource from 'vue-resource'
 import App from './App'
-import SystemMaintenance from './pages/SystemMaintenance'
+import Hello from './pages/Hello'
 import store from './vuex/store'
 
 Vue.use(Router)
@@ -15,8 +15,8 @@ Vue.config.debug = true
 export var router = new Router()
 
 router.map({
-  '/system-maintenance': {
-    component: SystemMaintenance
+  '/hello': {
+    component: Hello
   }
 })
 
@@ -28,7 +28,7 @@ router.afterEach(function () {
 })
 
 router.redirect({
-  '*': '/system-maintenance'
+  '*': '/hello'
 })
 
 sync(store, router)
